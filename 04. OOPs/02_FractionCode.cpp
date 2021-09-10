@@ -8,15 +8,38 @@ private:
     int denominator;
 
 public:
+    // Constructors
     Fraction(int numerator, int denominator)
     {
         this->numerator = numerator;
         this->denominator = denominator;
     }
-    void print()
+
+    // Getter and setter functions
+    int getNumerator() const // <- Constant Functions
+    {
+        return numerator;
+    }
+    int getDenominator() const // <- Constant Functions
+    {
+        return denominator;
+    }
+    void setNumerator(int num)
+    {
+        this->numerator = num;
+    }
+    void setDenominator(int de)
+    {
+        this->denominator = de;
+    }
+
+    // Data printing functions
+    void print() const // <- Constant Functions
     {
         cout << this->numerator << " / " << this->denominator << endl;
     }
+
+    // Manipulation functions
     void add(Fraction const &f2)
     {
         int lcm = this->denominator * f2.denominator;
@@ -66,6 +89,10 @@ int main()
     f1.multi(f2);
     cout << "The multiply of f1 and f2: ";
     f1.print();
+
+    // Constant functions -> Function which does not change any property of the current object.
+    Fraction const func(21, 29);
+    func.print();
 
     return 0;
 }
