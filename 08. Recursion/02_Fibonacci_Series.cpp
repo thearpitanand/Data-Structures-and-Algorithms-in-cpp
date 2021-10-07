@@ -4,7 +4,7 @@ using namespace std;
 int fib(int n)
 {
     // Using Princple of Mathematical Induction
-    
+
     // Base Case
     if (n == 0)
         return 0;
