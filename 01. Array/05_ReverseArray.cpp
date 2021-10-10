@@ -14,11 +14,11 @@ void displayArray(int a[], string message = "Your Array is :")
 }
 
 // Swaping two Elemets
-void swap(int *a, int *b)
+void swap(int &a, int &b)
 {
-    int temp = *a;
-    *a = *b;
-    *b = *a;
+    int temp = a;
+    a = b;
+    b = temp;
 }
 
 // Reversing Array
@@ -31,7 +31,7 @@ void reverseArray(int a[], int sizeOfArray)
         {
             break;
         }
-        swap(&a[i], &a[j]);
+        swap(a[i], a[j]);
         j--;
     }
 }
