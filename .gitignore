@@ -1,4 +1,7 @@
 *.exe
 
+# Code Runner
+tempCodeRunnerFile.cpp
+
 # vs code
 .vscode/
